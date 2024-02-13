@@ -235,17 +235,5 @@ class LoginController extends BaseController
         // Redirect to a success page or display a success message
         return redirect()->to('/Forms')->with('success', 'Field added successfully');
     }
-    public function edit($info)
-    {
-        // Load the product to be edited from the database
-        $model = new infoModel();
-        $info = $model->find($info);
-
-        // Load the edit view with the product data
-        return view('info', ['info' => $info]);
-    }
-
-
-
   
 }

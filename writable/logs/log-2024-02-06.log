@@ -1,0 +1,28 @@
+CRITICAL - 2024-02-06 23:11:49 --> Undefined array key "id"
+in APPPATH\Views\userinc\Formtable.php on line 53.
+ 1 APPPATH\Views\userinc\Formtable.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php', 53)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(237): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\LoginController.php(182): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->Forms()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+CRITICAL - 2024-02-06 23:59:43 --> Undefined variable $info
+in APPPATH\Views\userfol\dashboard.php on line 63.
+ 1 APPPATH\Views\userfol\dashboard.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\dashboard.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/dashboard', [], true)
+ 5 APPPATH\Controllers\LoginController.php(131): view('userfol/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->dashboards()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')

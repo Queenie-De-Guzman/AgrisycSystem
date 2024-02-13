@@ -34,4 +34,5 @@
   <!-- responsive style -->
   <link href="<?= base_url() ?>assets_landingpage/css/responsive.css" rel="stylesheet" />
   <link rel="shortcut icon" href="images/favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>

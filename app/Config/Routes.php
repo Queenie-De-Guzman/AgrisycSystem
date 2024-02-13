@@ -27,6 +27,7 @@ $routes->match(['post', 'get'], '/dashboards', 'LoginController::dashboards', ['
 $routes->get('/dashboards', 'LoginController::dashboards', ['filter' => 'authGuard']);
 $routes->get('/Chat', 'LoginController::Chat');
 $routes->get('/report', 'LoginController::report');
+$routes->get('/dashboards', 'DashboardController::damage');
 
 
 

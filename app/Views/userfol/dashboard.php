@@ -38,7 +38,7 @@
                     <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
                       <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <i class="mdi mdi-calendar"></i> Today (4 Nov 2023)
-                      </button>
+                      </button> 
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
                         <a class="dropdown-item" href="#">January - March</a>
                         <a class="dropdown-item" href="#">March - June</a>
@@ -55,15 +55,15 @@
      
         </div>
                 
-    <div class="row">
-        <div class="col-md-6 mb-4 stretch-card transparent">
-            <div class="card card-tale">
-                <div class="card-body">
-                <p class="mb-4">Total Damage </p>
-                <h2 id="UserTable">Loading...</h2>
-                </div>
-            </div>
-        </div>
+      <div class="row">
+          <div class="col-md-6 mb-4 stretch-card transparent">
+              <div class="card card-tale">
+                  <div class="card-body">
+                  <p class="mb-4">Total Damage </p>
+                  <h2 id="UserTable"></h2>
+                  </div>
+              </div>
+          </div>
   
 <div class="col-md-6 mb-4 stretch-card transparent">
     <div class="card card-tale">
