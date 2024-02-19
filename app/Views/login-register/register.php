@@ -89,7 +89,7 @@
  
                   <img src="<?=base_url()?>assets_landingpage/images/agri.png"   
                     style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Create an Account</h4>
+                  <h4 class="mt-1 mb-5 pb-1"  style="color:black ; font-weight: bold; font-family: Arial, sans-serif;">Sign up to Agrisync</h4>
                   <?php if (isset($validation)) : ?>
 							<div class="alert alert-warning">
 								<?= $validation->listErrors() ?>
@@ -117,22 +117,31 @@
 
                 
                   <div class="form-outline mb-4">
-       <span><i class="fa fa-lock"></i>  Password</span>
+       <span><i class="fa fa-lock"></i>  Re-type Password</span>
                     <input type="password" name="re_password" class="form-control"  placeholder="Password" required/>
                   
                   </div>
 
                   <div class="form-input">
 							<span><i class="fa fa-user"></i> User Type</span>
-							<input type="text" name="usertype"  class="form-control" value="<?= set_value('usertype') ?>" placeholder="user or admin"required>
+							<input type="text" name="usertype"  class="form-control" value="<?= set_value('usertype') ?>"required>
 </div>
-                  <div class="text-center pt-1 mb-5 pb-1">
-                
-                     <button class="btn btn-primary w-100" name="signup" id="signup" type="submit">Create Account</button>
-                   </div>
+<br>
+
+<div class="text-center pt-1 mb-10 pb-1">
+    <style>
+        /* CSS para sa hover effect */
+        #signup:hover {
+            background-color: Black; /* Kulay sage green */
+        }
+    </style>
+    <button class="btn btn-primary w-100" name="signup" id="signup" type="submit" style=" font-size: 20px; font-family: Arial, sans-serif;">Create Account</button>
+</div>
+                   <br>
                    <div class="col-12">
-                     <p class="small mb-0">Already have an account? <a href="/signin">Login</a></p>
-                   </div>
+    <p class="big mb-100">If you already have account,<a href="/signin" style="color: green; font-weight: bold; font-size: 20px;"> Log in.</a></p>
+</div>
+
 
                 </form>
 

@@ -26,6 +26,7 @@
 
         <div>
     <h1>Onion Report</h1>
+
     <div id="multi-step-form-container">
         <!-- Form Steps / Progress Bar -->
         <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
@@ -67,7 +68,7 @@
             </li>
         </ul>
         <!-- Step Wise Form Content -->
-        <form action="/Occi" method="post" id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data">
+        <form action="/AllFarmers" method="post" id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data">
             <!-- Step 1 Content -->
             <input type="hidden" name="id" value="<?= isset($in['id']) ? $in['id'] :'' ?>">
             <section id="step-1" class="form-step">
@@ -78,20 +79,10 @@
     <div class="col-md-6">
       <div class="form-group">
         <label for="NameofFramer">Name of Farmer</label>
-        <input type="text" class="form-control"  name="names" id="names" placeholder="Name of Farmer"required value= "<?= (isset($in['names']))? $in ['names'] : ""  ?>">
+     
+        <input type="text" class="form-control"  name="names" id="names" placeholder=" Surname, First Name, Middle Name"required value= "<?= (isset($in['names']))? $in ['names'] : ""  ?>">
       </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="FarmerLocation">Farmer Location</label>
-        <input type="text" class="form-control" name="location" id="location" placeholder="Farmer Location"required value= "<?= (isset($in['location']))? $in ['location'] : ""  ?>">
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="row">
+      <div class="row">
     <div class="col-md-6">
       <div class="form-group">
         <label for="NoofCans">No. of Cans</label>
@@ -106,18 +97,75 @@
       </div>
     </div>
   </div>
+  
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label for="NoofArea">Expected No. of Area</label>
+        <label for="NoofArea">Expected No. of Area (Square Meter) </label>
         <input type="text" class="form-control"  name="area"  id="area" placeholder="Expected No of Area" required value= "<?= (isset($in['area']))? $in ['area'] : ""  ?>">
       </div>
     </div>
+    <div class="col-md-6 mb-3">
+            <label for="street-text" class="form-label">Street (Optional)</label>
+            <input type="text" class="form-control form-control-md" name="street_text" id="street-text">
+        </div>
   </div>
-</div>
-         <div class="mt-3">
+
+       
+
+          </div>
+
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="FarmerLocation">Farmer Location</label>
+        <div class="row">
+        <div class="col-sm-6 mb-3">
+            <label class="form-label">Region *</label>
+            <select name="region" class="form-control form-control-md" id="region"></select>
+            <input type="hidden" class="form-control form-control-md" name="region_text" id="region-text" required>
+        </div>
+        <div class="col-sm-6 mb-3">
+            <label class="form-label">Province *</label>
+            <select name="province" class="form-control form-control-md" id="province"></select>
+            <input type="hidden" class="form-control form-control-md" name="province_text" id="province-text" required>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-6 mb-3">
+            <label class="form-label">City / Municipality *</label>
+            <select name="city" class="form-control form-control-md" id="city"></select>
+            <input type="hidden" class="form-control form-control-md" name="city_text" id="city-text" required>
+        </div>
+        <div class="col-sm-6 mb-3">
+            <label class="form-label">Barangay *</label>
+            <select name="barangay" class="form-control form-control-md" id="barangay"></select>
+            <input type="hidden" class="form-control form-control-md" name="barangay_text" id="barangay-text" required>
+        </div>
+        <div>
+       
+
+
+
+
+      </div>
+    </div>
+ 
+  
+    <div class="mt-3">
                     <button class="button btn-navigate-form-step" type="button" step_number="2">Next</button>
                 </div>
+
+</div>
+   
+
+    </div>
+
+    
+  
+
+
+
             </section>
 
 
@@ -230,6 +278,13 @@
             </section>
         </form>
     </div>
+
+
+
+
+
+
+
 </div>        
 
 

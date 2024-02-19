@@ -1,0 +1,46 @@
+ERROR - 2024-02-19 10:58:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\AgrisycSystem\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\AgrisycSystem\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\AgrisycSystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\AgrisycSystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\AgrisycSystem\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\AgrisycSystem\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\AgrisycSystem\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\AgrisycSystem\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\AgrisycSystem\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\AgrisycSystem\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\AgrisycSystem\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\AgrisycSystem\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\AgrisycSystem\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\AgrisycSystem\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\AgrisycSystem\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\AgrisycSystem\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\AgrisycSystem\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\AgrisycSystem\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\AgrisycSystem\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\AgrisycSystem\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-19 10:58:53 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\AgrisycSystem\\public\\index.php')
