@@ -3,84 +3,201 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\RegModel;
 use App\Models\infoModel;
 
 class ReportController extends BaseController
 {
-    public function index()
+
+    private $user;
+    private $info;
+
+    public function __construct()
     {
-        $infoModel = new infoModel();
-        $data['reports'] = $infoModel->findAll(); // Fetch all reports
+   
+        $this->user = new \App\Models\RegModel();
+        $this->info = new \App\Models\infoModel();
 
-        // Prepare data for the chart: Count of reports by location
-        $locationCounts = $this->countOccurrences($data['reports'], 'location');
-
-        // Prepare data for the chart: Count of reports by typhoon
-        $typhoonCounts = $this->countOccurrences($data['reports'], 'typhoon');
-
-        // Prepare data for the chart: Total damages by location
-        $totalDamagesByLocation = $this->calculateTotalDamages($data['reports']);
-
-        // Prepare data for the chart: Average standing crop by location
-        $averageStandingCropByLocation = $this->calculateAverageStandingCrop($data['reports']);
-
-        $data['info'] = [
-            'locationCounts' => $locationCounts,
-            'typhoonCounts' => $typhoonCounts,
-            'totalDamagesByLocation' => $totalDamagesByLocation,
-            'averageStandingCropByLocation' => $averageStandingCropByLocation
-        ];
-
-        // Pass $data to the view
-        return view('report', $data);
     }
 
-    private function countOccurrences($reports, $field)
-    {
-        $counts = [];
-        foreach ($reports as $report) {
-            $value = $report[$field];
-            if (!isset($counts[$value])) {
-                $counts[$value] = 0;
-            }
-            $counts[$value]++;
-        }
-        return $counts;
+   
+public function Damage()
+{
+    // Setting header to json
+    header('Content-Type: application/json');
+
+     // Database connection details
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $database = "agrisync";
+ 
+         // Get the user ID from the session
+         $userId = session()->get('user_id');
+ 
+ 
+    // Create connection
+    $conn = new \mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
 
-    private function calculateTotalDamages($reports)
-    {
-        $totalDamagesByLocation = [];
-        foreach ($reports as $report) {
-            $location = $report['location'];
-            $totalDamages = $report['total_damages'];
-            if (!isset($totalDamagesByLocation[$location])) {
-                $totalDamagesByLocation[$location] = 0;
-            }
-            $totalDamagesByLocation[$location] += $totalDamages;
+    // Query to calculate total damages for a specific user
+    $query = "SELECT 
+    MONTH(date) AS dt,
+    SUM(typhoon) AS total_damage
+  FROM 
+    info
+  GROUP BY 
+    MONTH(date) 
+  ORDER BY 
+    dt";
+
+    // Execute query
+    $result = $conn->query($query);
+
+    // Check if query execution was successful
+    if ($result) {
+        // Loop through the returned data
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
         }
-        return $totalDamagesByLocation;
+
+        // Free result set
+        $result->free_result();
+
+        // Close connection
+        $conn->close();
+
+        // Now print the data
+        echo json_encode($data);
+    } else {
+        // Error occurred while executing the query
+        echo "Error: " . $conn->error;
+    }
+}
+
+   
+public function HeavyRains()
+{
+    // Setting header to json
+    header('Content-Type: application/json');
+
+     // Database connection details
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $database = "agrisync";
+ 
+         // Get the user ID from the session
+         $userId = session()->get('user_id');
+ 
+ 
+    // Create connection
+    $conn = new \mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
 
-    private function calculateAverageStandingCrop($reports)
-    {
-        $averageStandingCropByLocation = [];
-        foreach ($reports as $report) {
-            $location = $report['location'];
-            $standingCrop = $report['standing_crop'];
-            if (!isset($averageStandingCropByLocation[$location])) {
-                $averageStandingCropByLocation[$location] = ['sum' => 0, 'count' => 0];
-            }
-            $averageStandingCropByLocation[$location]['sum'] += $standingCrop;
-            $averageStandingCropByLocation[$location]['count']++;
+    // Query to calculate total damages for a specific user
+    $query = "SELECT 
+    MONTH(date) AS dt,
+    SUM(heavy_rains) AS total_Heavy
+  FROM 
+    info
+  GROUP BY 
+    MONTH(date) 
+  ORDER BY 
+    dt";
+
+    // Execute query
+    $result = $conn->query($query);
+
+    // Check if query execution was successful
+    if ($result) {
+        // Loop through the returned data
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
         }
-        foreach ($averageStandingCropByLocation as $location => &$data) {
-            if ($data['count'] > 0) {
-                $data = $data['sum'] / $data['count'];
-            } else {
-                $data = 0;
-            }
-        }
-        return $averageStandingCropByLocation;
+
+        // Free result set
+        $result->free_result();
+
+        // Close connection
+        $conn->close();
+
+        // Now print the data
+        echo json_encode($data);
+    } else {
+        // Error occurred while executing the query
+        echo "Error: " . $conn->error;
     }
+}
+
+   
+public function Cans()
+{
+    // Setting header to json
+    header('Content-Type: application/json');
+
+     // Database connection details
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $database = "agrisync";
+ 
+         // Get the user ID from the session
+         $userId = session()->get('user_id');
+ 
+ 
+    // Create connection
+    $conn = new \mysqli($servername, $username, $password, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Query to calculate total damages for a specific user
+    $query = "SELECT 
+    MONTH(date) AS dt,
+    SUM(cans_damages) AS total_cans
+  FROM 
+    info
+  GROUP BY 
+    MONTH(date) 
+  ORDER BY 
+    dt";
+
+    // Execute query
+    $result = $conn->query($query);
+
+    // Check if query execution was successful
+    if ($result) {
+        // Loop through the returned data
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+
+        // Free result set
+        $result->free_result();
+
+        // Close connection
+        $conn->close();
+
+        // Now print the data
+        echo json_encode($data);
+    } else {
+        // Error occurred while executing the query
+        echo "Error: " . $conn->error;
+    }
+}
+
 }

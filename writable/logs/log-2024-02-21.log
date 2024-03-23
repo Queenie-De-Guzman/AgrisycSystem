@@ -1,0 +1,16 @@
+CRITICAL - 2024-02-21 03:03:36 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 34.
+ 1 APPPATH\Views\userinc\Formtable.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(260): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\LoginController.php(211): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')

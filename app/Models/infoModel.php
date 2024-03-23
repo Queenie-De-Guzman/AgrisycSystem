@@ -12,7 +12,8 @@ class infoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','names','location','cans', 'date','area','typhoon','heavy_rains','total_damages','cans_damages','standing_crop','transplate_date','expected_date','expected_area','expected_volumn','created_at'];
+    protected $allowedFields    = ['user_id',  'names', 'region','province',    'city',    'barangay',  'cans',    'varia',    'date',    'act',    'area',    'typhoonname',    'typhoon',    'heavy_rains',    'total_damages',    'cans_damages',    'HA',    'disease',  'list', 'standing_crop',   'planted',    'transplate_date',  'expected_date',
+    'production',    'Harvested',    'expected_volumn',    'Local',    'per_kg',    'php_per_kg',    'Cold',    'perkg',    'phpper_kg',    'OTHERS', 'created_at'];
 
     // Dates
     protected $useTimestamps = false;

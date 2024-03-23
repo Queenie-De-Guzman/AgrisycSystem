@@ -1,0 +1,370 @@
+CRITICAL - 2024-02-27 04:19:41 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 36.
+ 1 APPPATH\Views\userinc\Formtable.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php', 36)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(290): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(73): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+CRITICAL - 2024-02-27 12:04:51 --> Table 'webagrisync.info' doesn't exist
+in APPPATH\Controllers\ChartController.php on line 105.
+ 1 APPPATH\Controllers\ChartController.php(105): mysqli->query('SELECT 
+    COUNT(*) AS numFarmers 
+    FROM info WHERE
+     user_id = 24')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->calculateFarmers()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 12:04:54 --> Table 'webagrisync.info' doesn't exist
+in APPPATH\Controllers\ChartController.php on line 105.
+ 1 APPPATH\Controllers\ChartController.php(105): mysqli->query('SELECT 
+    COUNT(*) AS numFarmers 
+    FROM info WHERE
+     user_id = 24')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->calculateFarmers()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 12:12:43 --> Table 'agrisync.information' doesn't exist
+in APPPATH\Controllers\ChartController.php on line 204.
+ 1 APPPATH\Controllers\ChartController.php(204): mysqli->query('SELECT SUM(cans_damages) as damages FROM information WHERE user_id = 24')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->calculatecrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 12:12:45 --> Table 'agrisync.information' doesn't exist
+in APPPATH\Controllers\ChartController.php on line 204.
+ 1 APPPATH\Controllers\ChartController.php(204): mysqli->query('SELECT SUM(cans_damages) as damages FROM information WHERE user_id = 24')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->calculatecrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 12:54:50 --> Unknown column 'expected_volume' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volume) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 24
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 12:59:28 --> Unknown column 'expected_volume' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volume) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 24
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 13:16:40 --> Undefined variable $city
+in APPPATH\Controllers\ChartController.php on line 461.
+ 1 APPPATH\Controllers\ChartController.php(461): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $city', 'C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\ChartController.php', 461)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totallocation()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:24 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:21:27 --> syntax error, unexpected variable "$userId"
+in APPPATH\Controllers\OrientalDashboardController.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\may save na daw at edit\\app\\Controllers\\OrientalDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\OrientalDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\OrientalDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\OrientalDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:30:35 --> Unknown column 'location' in 'field list'
+in APPPATH\Controllers\OrientalDashboardController.php on line 390.
+ 1 APPPATH\Controllers\OrientalDashboardController.php(390): mysqli->prepare('SELECT location, COUNT(location) AS location_count FROM info WHERE user_id = ? GROUP BY location')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrientalDashboardController->OrientalLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrientalDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:31:33 --> Unknown column 'location' in 'field list'
+in APPPATH\Controllers\OrientalDashboardController.php on line 390.
+ 1 APPPATH\Controllers\OrientalDashboardController.php(390): mysqli->prepare('SELECT location, COUNT(location) AS location_count FROM info WHERE user_id = ? GROUP BY location')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrientalDashboardController->OrientalLocation()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrientalDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:46:58 --> Invalid file: "/admininc/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admininc/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/admininc/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/admininc/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:47:25 --> Invalid file: "/adminifol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/adminifol/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/adminifol/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/adminifol/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:47:26 --> Invalid file: "/adminifol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/adminifol/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/adminifol/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/adminifol/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:47:26 --> Invalid file: "/adminifol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/adminifol/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/adminifol/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/adminifol/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:47:30 --> Invalid file: "/adminifol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/adminifol/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/adminifol/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/adminifol/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 15:48:23 --> Invalid file: "/adminifol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/adminifol/Table.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/adminifol/Table', null, true)
+ 3 APPPATH\Views\Province\OrientalMindoro\OrMinForms.php(285): CodeIgniter\View\View->include('/adminifol/Table')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\may save na daw at edit\\app\\Views\\Province\\OrientalMindoro\\OrMinForms.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Province/OrientalMindoro/OrMinForms', [], true)
+ 7 APPPATH\Controllers\AdminController.php(43): view('Province/OrientalMindoro/OrMinForms', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->OrMinForms()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-02-27 16:18:31 --> Invalid file: "adminfol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminfol/Table.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('adminfol/Table', [], true)
+ 3 APPPATH\Controllers\AdminController.php(462): view('adminfol/Table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->Table()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\may save na daw at edit\\public\\index.php')

@@ -1,0 +1,308 @@
+ERROR - 2024-02-18 10:49:17 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 10:49:17 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+ERROR - 2024-02-18 11:03:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 11:03:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+ERROR - 2024-02-18 11:04:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 11:04:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+ERROR - 2024-02-18 11:21:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 11:21:12 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+ERROR - 2024-02-18 11:22:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 11:22:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+ERROR - 2024-02-18 11:23:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'agrisync', 3306, '', 0)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\agrisync-main\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\agrisync-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\agrisync-main\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\agrisync-main\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\agrisync-main\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\agrisync-main\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\agrisync-main\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#7 C:\laragon\www\agrisync-main\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\laragon\www\agrisync-main\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\agrisync-main\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\agrisync-main\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-18 11:23:27 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+CRITICAL - 2024-02-18 11:30:32 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 33.
+ 1 APPPATH\Views\userinc\Formtable.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php', 33)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\report.php(62): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\report.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/report', [], true)
+ 9 APPPATH\Controllers\LoginController.php(155): view('userfol/report')
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->report()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')
+CRITICAL - 2024-02-18 12:11:41 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 33.
+ 1 APPPATH\Views\userinc\Formtable.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php', 33)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\report.php(62): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\agrisync-main\\app\\Views\\userfol\\report.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/report', [], true)
+ 9 APPPATH\Controllers\LoginController.php(155): view('userfol/report')
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->report()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\agrisync-main\\public\\index.php')

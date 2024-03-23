@@ -1,0 +1,94 @@
+ERROR - 2024-03-08 01:59:41 --> mysqli_sql_exception: Table 'agrisync.user' doesn't exist in E:\03624\may save na daw at edit\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\03624\may save na daw at edit\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\03624\may save na daw at edit\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\03624\may save na daw at edit\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\03624\may save na daw at edit\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\03624\may save na daw at edit\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\03624\may save na daw at edit\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\03624\may save na daw at edit\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 E:\03624\may save na daw at edit\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 E:\03624\may save na daw at edit\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 E:\03624\may save na daw at edit\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\03624\may save na daw at edit\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\03624\may save na daw at edit\system\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may sa...')
+#12 {main}
+CRITICAL - 2024-03-08 01:59:41 --> Table 'agrisync.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')
+ERROR - 2024-03-08 01:59:57 --> mysqli_sql_exception: Table 'agrisync.user' doesn't exist in E:\03624\may save na daw at edit\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\03624\may save na daw at edit\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\03624\may save na daw at edit\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\03624\may save na daw at edit\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\03624\may save na daw at edit\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\03624\may save na daw at edit\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\03624\may save na daw at edit\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\03624\may save na daw at edit\app\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+#7 E:\03624\may save na daw at edit\system\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+#8 E:\03624\may save na daw at edit\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 E:\03624\may save na daw at edit\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\03624\may save na daw at edit\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\03624\may save na daw at edit\system\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may sa...')
+#12 {main}
+CRITICAL - 2024-03-08 01:59:57 --> Table 'agrisync.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\LoginController.php(81): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\LoginController->loginauth()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-03-08 02:10:26 --> Unknown database 'webagrisync'
+in APPPATH\Controllers\AdminDashboardController.php on line 345.
+ 1 APPPATH\Controllers\AdminDashboardController.php(345): mysqli->__construct('localhost', 'root', '', 'webagrisync')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->transplate()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-03-08 02:15:14 --> Invalid file: "adminfol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminfol/Table.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('adminfol/Table', [], true)
+ 3 APPPATH\Controllers\AdminController.php(469): view('adminfol/Table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->Table()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-03-08 02:16:25 --> Unknown database 'webagrisync'
+in APPPATH\Controllers\AdminDashboardController.php on line 345.
+ 1 APPPATH\Controllers\AdminDashboardController.php(345): mysqli->__construct('localhost', 'root', '', 'webagrisync')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->transplate()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')
+CRITICAL - 2024-03-08 02:27:55 --> Invalid file: "adminfol/Table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminfol/Table.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('adminfol/Table', [], true)
+ 3 APPPATH\Controllers\AdminController.php(469): view('adminfol/Table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminController->Table()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\03624\\may save na daw at edit\\public\\index.php')

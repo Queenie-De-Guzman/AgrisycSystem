@@ -1,0 +1,57 @@
+CRITICAL - 2024-03-20 05:42:23 --> Unknown column 'expected_area' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volumn) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 36
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-20 06:03:48 --> Unknown column 'expected_area' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volumn) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 36
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-20 06:06:05 --> Unknown column 'expected_area' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volumn) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 36
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')

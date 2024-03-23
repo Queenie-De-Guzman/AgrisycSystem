@@ -26,7 +26,6 @@
 
         <div>
     <h1>Onion Report</h1>
-
     <div id="multi-step-form-container">
         <!-- Form Steps / Progress Bar -->
         <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
@@ -278,19 +277,12 @@
             </section>
         </form>
     </div>
-
-
-
-
-
-
-
 </div>        
 
 
-<?= $this-> include('/admininc/Adminform')?>
 
-
+    
+<?= $this-> include('/adminfol/TableForm')?>
 
 
             </div>

@@ -66,8 +66,10 @@
                 </a>
             </li>
         </ul>
+
+        
         <!-- Step Wise Form Content -->
-        <form action="/AllFarmers" method="post" id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data">
+        <form action="/save" method="post" id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data">
             <!-- Step 1 Content -->
             <input type="hidden" name="id" value="<?= isset($in['id']) ? $in['id'] :'' ?>">
             <section id="step-1" class="form-step">

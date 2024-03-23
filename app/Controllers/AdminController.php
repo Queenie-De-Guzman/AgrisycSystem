@@ -29,6 +29,13 @@ class AdminController extends BaseController
             return view('Province/OrientalMindoro/OrMinDash');
         }
     }
+
+
+
+
+
+
+
   public function OrMinForms()
     {
 
@@ -36,7 +43,7 @@ class AdminController extends BaseController
             return redirect()->to('/signin');
         } 
         $userId = session()->get('user_id');
-
+        $userId= 35;
         $data = [
             'info' => $this->info->where('user_id', $userId)->findAll()
         ];
@@ -118,7 +125,7 @@ class AdminController extends BaseController
             return redirect()->to('/signin');
         } 
         $userId = session()->get('user_id');
-
+         $userId= 35;
         $data = [
             'info' => $this->info->where('user_id', $userId)->findAll()
         ];
@@ -199,7 +206,7 @@ class AdminController extends BaseController
             return redirect()->to('/signin');
         } 
         $userId = session()->get('user_id');
-
+        $userId= 38;
         $data = [
             'info' => $this->info->where('user_id', $userId)->findAll()
         ];
@@ -281,7 +288,7 @@ class AdminController extends BaseController
             return redirect()->to('/signin');
         } 
         $userId = session()->get('user_id');
-
+        $userId= 39;
         $data = [
             'info' => $this->info->where('user_id', $userId)->findAll()
         ];
@@ -363,7 +370,7 @@ class AdminController extends BaseController
             return redirect()->to('/signin');
         } 
         $userId = session()->get('user_id');
-
+        $userId= 37;
         $data = [
             'info' => $this->info->where('user_id', $userId)->findAll()
         ];

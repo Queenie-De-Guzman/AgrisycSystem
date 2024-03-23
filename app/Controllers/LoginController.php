@@ -168,72 +168,7 @@ class LoginController extends BaseController
 
 
 
-    // form ito ang simula nun save edit update delete
-    public function Forms()
-    {
-        if (!session()->get('isLoggedIn')) {
-            return redirect()->to('/signin');
-        } 
-        $userId = session()->get('user_id');
 
-        $data = [
-            'info' => $this->info->where('user_id', $userId)->findAll()
-        ];
-        return view('userfol/Forms', $data);
-    }
-    
-    public function save()
-    {
-        $userId = session()->get('user_id');
-        
 
-        // Validate the form data
-        $validation = $this->validate([
-            'names' => 'required',
-            'location' => 'required',
-            'cans' => 'required',
-            'date' => 'required',
-            'area' => 'required',
-            'typhoon' => 'required',
-            'heavy_rains' => 'required',
-            'total_damages' => 'required',
-            'cans_damages' => 'required',
-            'standing_crop' => 'required',
-            'transplate_date' => 'required',
-            'expected_date' => 'required',
-            'expected_area' => 'required',
-            'expected_volumn' => 'required',
-          
-        ]);
-
-        if (!$validation) {
-            // Validation failed, return to the form with errors
-            return view('userfol/Forms', ['validation' => $this->validator]);
-        }
-
-        // If validation passes, insert the data into the database
-        $this->info->save([
-            'names' => $this->request->getPost('names'),
-            'location' => $this->request->getPost('location'),
-            'cans' => $this->request->getPost('cans'),
-            'date' => $this->request->getPost('date'),
-            'area' => $this->request->getPost('area'),
-            'typhoon' => $this->request->getPost('typhoon'),
-            'heavy_rains' => $this->request->getPost('heavy_rains'),
-            'total_damages' => $this->request->getPost('total_damages'),
-            'cans_damages' => $this->request->getPost('cans_damages'),
-            'standing_crop' => $this->request->getPost('standing_crop'),
-            'transplate_date' => $this->request->getPost('transplate_date'),
-            'expected_date' => $this->request->getPost('expected_date'),
-            'expected_area' => $this->request->getPost('expected_area'),
-            'expected_volumn' => $this->request->getPost('expected_volumn'),
-            'user_id' => $userId,
-          
-
-        ]);
-
-        // Redirect to a success page or display a success message
-        return redirect()->to('/Forms')->with('success', 'Field added successfully');
-    }
   
 }
