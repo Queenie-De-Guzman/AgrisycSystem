@@ -1,0 +1,161 @@
+CRITICAL - 2024-03-24 08:25:00 --> Invalid file: "/Forms.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Forms.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/Forms', [], true)
+ 3 APPPATH\Controllers\FormController.php(142): view('/Forms', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('59', '', '$')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:25:11 --> Invalid file: "/Forms.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Forms.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/Forms', [], true)
+ 3 APPPATH\Controllers\FormController.php(142): view('/Forms', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('61', '', '$')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:26:25 --> Invalid file: "/Forms.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Forms.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/Forms', [], true)
+ 3 APPPATH\Controllers\FormController.php(142): view('/Forms', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('61', '', '$')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:26:43 --> Invalid file: "/Forms.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Forms.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/Forms', [], true)
+ 3 APPPATH\Controllers\FormController.php(142): view('/Forms', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('59', '', '$')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:28:11 --> Invalid file: "/Forms.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Forms.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/Forms', [], true)
+ 3 APPPATH\Controllers\FormController.php(142): view('/Forms', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('59', '', '$')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:31:31 --> Undefined array key "expected_"
+in APPPATH\Views\userfol\Forms.php on line 290.
+ 1 APPPATH\Views\userfol\Forms.php(290): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expected_"', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php', 290)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 5 APPPATH\Controllers\FormController.php(142): view('userfol/Forms', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->edit('59', '', '$')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:38:28 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 56.
+ 1 APPPATH\Views\userinc\Formtable.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php', 56)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(376): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(89): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:40:38 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 56.
+ 1 APPPATH\Views\userinc\Formtable.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php', 56)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(376): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(89): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:41:13 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 56.
+ 1 APPPATH\Views\userinc\Formtable.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php', 56)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(376): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(89): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:41:16 --> Undefined variable $info
+in APPPATH\Views\userinc\Formtable.php on line 56.
+ 1 APPPATH\Views\userinc\Formtable.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php', 56)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(376): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(89): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->save()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 08:57:33 --> Undefined array key "region"
+in APPPATH\Views\userinc\Formtable.php on line 59.
+ 1 APPPATH\Views\userinc\Formtable.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "region"', 'C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php', 59)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userinc\\Formtable.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('/userinc/Formtable', null, true)
+ 5 APPPATH\Views\userfol\Forms.php(376): CodeIgniter\View\View->include('/userinc/Formtable')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\semi-Final CAP\\app\\Views\\userfol\\Forms.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('userfol/Forms', [], true)
+ 9 APPPATH\Controllers\FormController.php(34): view('userfol/Forms', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\FormController->Forms()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')
+CRITICAL - 2024-03-24 11:32:38 --> Unknown column 'expected_area' in 'field list'
+in APPPATH\Controllers\ChartController.php on line 324.
+ 1 APPPATH\Controllers\ChartController.php(324): mysqli->query('SELECT 
+    MONTH(expected_date) AS mon,
+    SUM(expected_area) AS total_expected_area,
+    SUM(expected_volumn) AS total_expected_volume
+  FROM 
+    info
+  WHERE 
+    user_id = 36
+  GROUP BY 
+    MONTH(expected_date) 
+  ORDER BY 
+    mon')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ChartController->totalcrop()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\semi-Final CAP\\public\\index.php')

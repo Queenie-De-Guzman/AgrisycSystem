@@ -26,7 +26,13 @@
            <span class="menu-title">Change Password</span>
          </a>
        </li>
-    
+        
+       <li class="nav-item">
+         <a class="nav-link" href="/up">
+           <i class="icon-head menu-icon"></i>
+           <span class="menu-title">Chat</span>
+         </a>
+       </li>
     
        <li class="nav-item">
          <a class="nav-link" href="/">

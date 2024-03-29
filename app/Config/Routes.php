@@ -33,9 +33,9 @@ $routes->get('/report', 'LoginController::report');
 //form
 
 $routes->match(['post','get'],'/Forms', 'FormController::Forms');
-$routes->match(['post', 'get'],'/save', 'FormController::save');
+$routes->match(['post', 'get'],'/add', 'FormController::add');
 $routes->post('viewreport/delete/(:num)', 'FormController::deletereport/$1');
-$routes->post('/edit/(:num)', 'FormController::edit/$1');
+$routes->get('/edit/(:num)', 'FormController::edit/$1/$2/$');
 $routes->post('/Forms/update/(:num)', 'FormController::update');
 
 
@@ -185,7 +185,7 @@ $routes->get('/CANS', 'ReportController::CANS', ['filter' => 'authGuard']);
 
 
 
-
+$routes->get('/up', 'FormController::up');
 
 
 

@@ -21,7 +21,7 @@
     <!-- side navbar ends -->
              
     <?= $this-> include('/userinc/todolist')?>
-
+    
 
     <div class="main-panel">
 
@@ -73,7 +73,7 @@
     </li>
 </ul>
 <!-- Step Wise Form Content -->
-<form action="/save" method="post"  enctype="multipart/form-data">
+<form action="/add" method="post"  enctype="multipart/form-data">
     <!-- Step 1 Content -->
     <input type="hidden" name="id" value="<?= isset($in['id']) ? $in['id'] :'' ?>">
     <section id="step-1" class="form-step">
@@ -127,7 +127,7 @@
            
                 <div class="form-group">
                     <label for="varia">Variety of Onion</label>
-                    <input type="text" class="form-control" name="varias" id="varia" placeholder="Variety of Onion" required value="<?= (isset($in['varia']))? $in['varia'] : "" ?>">
+                    <input type="text" class="form-control" name="varia" id="varia" placeholder="Variety of Onion" required value="<?= (isset($in['varia']))? $in['varia'] : "" ?>">
                 </div>
                 <div class="form-group">
                     <label for="date">Seedling Date/Sowing Date</label>
@@ -287,7 +287,7 @@
 <div class="col-md-6">
 <div class="form-group">
 <label for="expected_date">Actual  Area Harvest (HA)</label>
-<input type="text" class="form-control"   name="expected_date"  id="expected_date" placeholder="Actual Area Harvest" required value= "<?= (isset($in['expected_date']))? $in ['expected_'] : ""  ?>">
+<input type="text" class="form-control"   name="expected_date"  id="expected_date" placeholder="Actual Area Harvest" required value= "<?= (isset($in['expected_date']))? $in ['expected_date'] : ""  ?>">
 </div>
 
 

@@ -91,44 +91,9 @@
                                  
                                   <td> 
                                     
-                                                <button type="button" class="button" onclick="editreport(
-                                                          <?= $in['id'];?>
-                                                    '<?= $in['names'];?>',
-                                                    '<?= $in['region'];?>',
-                                                    '<?= $in['province'];?>',
-                                                    '<?= $in['city'];?>',
-                                                    '<?= $in['barangay'];?>',
-                                                    '<?= $in['cans'];?>',
-                                                    '<?= $in['varia'];?>',
-                                                    '<?= $in['date'];?>',
-                                                    '<?= $in['act'];?>',
-                                                    '<?= $in['area'];?>',
-                                                    '<?= $in['typhoonname'];?>',
-                                                    '<?= $in['typhoon'];?>',
-                                                    '<?= $in['heavy_rains'];?>',
-                                                    '<?= $in['total_damages'];?>',
-                                                    '<?= $in['cans_damages'];?>',
-                                                    '<?= $in['HA'];?>',
-                                                    '<?= $in['disease'];?>',
-                                                    '<?= $in['list'];?>',
-                                                    '<?= $in['per'];?>',
-                                                    '<?= $in['standing_crop'];?>',
-                                                    '<?= $in['planted'];?>',
-                                                    '<?= $in['transplate_date'];?>',
-                                                    '<?= $in['expected_date'];?>',
-                                                    '<?= $in['production'];?>',
-                                                    '<?= $in['Harvested'];?>',
-                                                    '<?= $in['expected_volumn'];?>',
-                                                    '<?= $in['Local'];?>',
-                                                    '<?= $in['per_kg'];?>',
-                                                    '<?= $in['php_per_kg'];?>',
-                                                    '<?= $in['Cold'];?>',
-                                                    '<?= $in['perkg'];?>',
-                                                    '<?= $in['phpper_kg'];?>',
-                                                    '<?= $in['OTHERS'];?>',
-                                                        )">Edit</button>
+                                                    <a type="button"  class+="button" href="/edit/<?= $in['id']; ?>">Edit</a>
                                                     <button type="button" class="button" onclick="deletereport(<?= $in['id'];?>)">Delete</button>
-                                                    <a href="/edit/<?= $in['id']; ?> ">EDIT USER </td>
+                                                 
                                       
                                   </td>
                                 </tr>
@@ -155,9 +120,7 @@
 
 
 
-
-
-                  <!-- edit_product_modal.php -->
+                  <!-- edit_report_modal.php -->
 
 <div class="modal fade" id="editreportmodal" tabindex="-1" aria-labelledby="editreportmodalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -494,8 +457,10 @@
 </form>
 
 </div>
-
-
+        </div>
+    </div>
+        </div>
+   
 
 
 
